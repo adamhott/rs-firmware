@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Adam Hott"]
 
 [dependencies]
+icm426xx_i2c = { path= "drivers/icm426xx_i2c" }
 embedded-hal = "1.0.0"
 defmt = "0.3.0"
 defmt-rtt = "0.4"

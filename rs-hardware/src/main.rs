@@ -1,14 +1,14 @@
 #![no_std]
 #![no_main]
 
-
+mod drivers;
 use defmt::*;
 use embassy_executor::Spawner;
 use embassy_stm32::i2c::{self, Error, I2c};
 use embassy_stm32::time::Hertz;
 use embassy_stm32::{bind_interrupts, peripherals};
 use embedded_hal_async::i2c::I2c as HalI2c;
-use crate::drivers::icm426xx_i2c::{ICM42688, Ready, Uninitialized};
+use icm426xx_i2c::{ICM42688, Ready, Uninitialized};
 
 const ICM42688_ADDRESS: u8 = 0x68;
 
